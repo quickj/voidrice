@@ -5,11 +5,11 @@
 # If you don't plan on reverting to bash, you can remove the link in ~/.profile
 # to clean up.
 
-# Adds `~/.local/bin` to $PATH
-export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
+# Adds `~/.emacs.d/bin and ~/.local/bin` to $PATH
+export PATH="$HOME/.emacs.d/bin:$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 
 # Default programs:
-export EDITOR="nvim"
+export EDITOR="emacs"
 export TERMINAL="st"
 export BROWSER="brave"
 export READER="zathura"
