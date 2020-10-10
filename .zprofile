@@ -5,8 +5,13 @@
 # If you don't plan on reverting to bash, you can remove the link in ~/.profile
 # to clean up.
 
+<<<<<<< HEAD
 # Adds `~/.emacs.d/bin and ~/.local/bin` to $PATH
 export PATH="$HOME/.emacs.d/bin:$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
+=======
+# Adds `~/.local/bin` to $PATH
+export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
+>>>>>>> 687e2e1ef63ffab7bb2edd4661843efe7ddefaca
 
 # Default programs:
 export EDITOR="emacs"
@@ -68,11 +73,15 @@ ex=🎯:\
 *.me=✍:\
 *.ms=✍:\
 *.png=🖼:\
+*.webp=🖼:\
 *.ico=🖼:\
 *.jpg=📸:\
+*.jpe=📸:\
 *.jpeg=📸:\
 *.gif=🖼:\
 *.svg=🗺:\
+*.tif=🖼:\
+*.tiff=🖼:\
 *.xcf=🖌:\
 *.html=🌎:\
 *.xml=📰:\
@@ -89,6 +98,7 @@ ex=🎯:\
 *.R=📊:\
 *.rmd=📊:\
 *.Rmd=📊:\
+*.m=📊:\
 *.mp3=🎵:\
 *.opus=🎵:\
 *.ogg=🎵:\
@@ -106,6 +116,9 @@ ex=🎯:\
 *.z64=🎮:\
 *.v64=🎮:\
 *.n64=🎮:\
+*.gba=🎮:\
+*.nes=🎮:\
+*.gdi=🎮:\
 *.1=ℹ:\
 *.nfo=ℹ:\
 *.info=ℹ:\
@@ -116,6 +129,8 @@ ex=🎯:\
 *.ged=👪:\
 *.part=💔:\
 *.torrent=🔽:\
+*.jar=♨:\
+*.java=♨:\
 "
 
 [ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ] && shortcuts >/dev/null 2>&1 &
@@ -126,7 +141,7 @@ if pacman -Qs libxft-bgra >/dev/null 2>&1; then
 else
 	echo "\033[31mIMPORTANT\033[0m: Note that \033[32m\`libxft-bgra\`\033[0m must be installed for this build of dwm.
 Please run:
-	\033[32myay -S libxft-bgra\033[0m
+	\033[32myay -S libxft-bgra-git\033[0m
 and replace \`libxft\`"
 fi
 
