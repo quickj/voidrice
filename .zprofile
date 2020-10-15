@@ -5,13 +5,8 @@
 # If you don't plan on reverting to bash, you can remove the link in ~/.profile
 # to clean up.
 
-<<<<<<< HEAD
-# Adds `~/.emacs.d/bin and ~/.local/bin` to $PATH
-export PATH="$HOME/.emacs.d/bin:$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
-=======
-# Adds `~/.local/bin` to $PATH
-export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
->>>>>>> 687e2e1ef63ffab7bb2edd4661843efe7ddefaca
+# Adds `~/.config/emacs/bin and ~/.local/bin` to $PATH
+export PATH="${XDG_CONFIG_HOME:-$HOME/.config}/emacs/bin:$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 
 # Default programs:
 export EDITOR="emacs"
@@ -30,6 +25,9 @@ export LESSHISTFILE="-"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export ZSH="${XDG_CONFIG_HOME:-$HOME/.config}/oh-my-zsh"
+export DOOMDIR="${XDG_CONFIG_HOME:-$HOME/.config}/doom"
+export EMACSDIR="${XDG_CONFIG_HOME:-$HOME/.config}/emacs"
 #export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
 export KODI_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/kodi"
