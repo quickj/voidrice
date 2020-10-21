@@ -58,6 +58,9 @@ export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
 export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
 export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
 
+# Adds $GOPATH/bin to $PATH
+export PATH="$GOPATH/bin:$PATH"
+
 # This is the list for lf icons:
 export LF_ICONS="di=📁:\
 fi=📃:\
