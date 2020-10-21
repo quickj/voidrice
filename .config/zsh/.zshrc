@@ -102,6 +102,7 @@ plugins=(
     colored-man-pages
     colorize
     command-not-found
+    common-aliases
     cp
     extract
     gpg-agent
@@ -116,7 +117,9 @@ plugins=(
     golang
     # Distro-related
     archlinux
+    systemd
     # Misc
+    catimg
     battery
     emoji-clock
     zsh_reload
