@@ -24,6 +24,5 @@
 /make/
 /vimwiki/
 /perl5/
-.local/share/.*
+/.local/share/.*
 /.wasteland/
-.local/share/.*
